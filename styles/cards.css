@@ -1,0 +1,179 @@
+.services-session{
+    width: 100%;
+    /* height: 70vh; */
+    /* background-color: aqua; */
+}
+.services-container{
+    width: 80%;
+    display: flex;
+    /* border: 1px solid rgb(131, 130, 130); */
+    height: 70vh;
+    margin: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.services-card{
+    width: 28%;
+    height: 100%;
+    /* border: 1px solid yellow; */
+    /* margin-bottom: 30px; */
+    
+}
+.services-card:hover{
+    box-shadow: 10px 5px 10px 10px rgb(223, 222, 222);
+}
+.card-1{
+    width: 100%;
+    height: 70%;
+    border: 0.5px solid white;
+}
+.card-2{
+    width: 80%;
+    margin: auto;
+    height: 70%;
+    border: 1px solid white;
+    position: relative;
+    margin-top: 60%!important;
+    padding: 5px 0;
+}
+.first-image{
+    background: url('../images/hair-growth.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.second-image{
+    background: url('../images/feet-washing.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat; 
+}
+.third-image{
+    background: url('../images/hair-wash.jpg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.first-text{
+    text-align: center;
+    background-color: #fff;
+    padding-top: 30px;
+}
+.card-2 p{
+    font-size: 18px;
+}
+.text-title{
+    font-size: 20px!important;
+    padding-bottom: 0!important;
+}
+.text-desc{
+    padding-bottom: 8px!important;
+    padding: 0 10px 10px 10px!important;
+}
+.card-2 a{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 700;
+    font-family: 'roboto' sans-serif;
+    background-color: #e7b616;
+    padding: 10px 60px;
+    color: white;
+    position: relative;
+    margin-bottom: 20px;
+}
+.card-2 a:hover{
+    background-color: #be07b5;
+
+}
+.middle-link{
+    background-color: #be07b5!important;
+}
+.middle-link:hover{
+    background-color: #e7b616!important;
+}
+@media screen and (max-width: 1300px) and (min-width: 100px){
+    .services-session{
+        /* height: auto; */
+    }
+}
+@media screen and (max-width: 280px) and (min-width: 100px){
+    .card-2 a{
+        padding: 8px 0px!important;
+    } 
+    
+}
+@media screen and (max-width: 510px) and (min-width: 200px){
+    .services-card{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .card-2{
+        /* margin-top: 72%!important; */
+        margin-top: 65%!important;
+        height: 56%!important;
+    }
+    .services-session{
+        /* height: 66.5vh; */
+    }
+    .services-container{
+        height: 66.5vh;
+    }
+    .card-2 a{
+        padding: 8px 40px;
+    }
+    .text-desc{
+        padding-bottom: 0px!important;
+    }
+}
+@media screen and (max-width: 699px) and (min-width: 511px){
+    .services-card{
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .card-2{
+        /* margin-top: 72%!important; */
+        margin-top: 48%!important;
+        height: 62%!important;
+    }
+}
+@media screen and (max-width:800px) and (min-width: 700px){
+    .services-card{
+        width: 48%;
+        margin-bottom: 20px;
+    }
+    .card-2{
+        margin-top: 95%!important;
+        height: 50%!important;
+    }
+    
+    .services-session{
+        /* height: 75vh;  */
+     } 
+     .services-container{
+         height: 75vh;
+     }
+    .card-2 a{
+        padding: 8px 40px;
+    }
+    .text-desc{
+        padding-bottom: 20px!important;
+    }
+}
+@media screen and (max-width:1000px) and (min-width: 801px){
+    .services-card{
+        width: 48%;
+        margin-bottom: 20px;
+    }
+    .card-2{
+        margin-top: 72%!important;
+        height: 55%!important;
+    }
+    
+    
+}
+@media screen and (max-width:1200px) and (min-width: 1001px){
+    .card-2{
+        margin-top: 82%!important;
+    }
+    .card-2 a{
+        padding: 8px 12px!important;
+        font-size: 0.8em!important;
+    }
+}

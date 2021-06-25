@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../styles/tes.css">
+    <link rel="stylesheet" href="../styles/cards.css">
+    <link rel="stylesheet" href="../styles/services-types.css">
+    <!-- <link rel="stylesheet" href="../styles/navbar.css"> -->
+<!-- <script src="js/main.js"></script> -->
+
+</head>
+<body onload="StartSlide()">
+  <div class="container">
+    <nav class="navbar">
+      <div class="logo">
+          <img alt='botchi' src =' ../images/Service-logo.png ' width="70px" height="70px" />
+          <!-- <span>botchi</span> -->
+        </div>
+      
+      <div class='hamburger' >
+          
+          <span class='harmburger-menu'onclick='showMenu()'>Menu</span>
+      </div>
+        
+      <!-- <div class='cancel'>
+          <span class='m' onClick={this.hideMenu}>cancel</span>
+        
+      </div> -->
+      <div class="nav-links">
+          <span class='cancel' style="font-size: large;" onclick='hideMenu()'>X</span>
+          <a href='#' id="about">About</a>
+          <a href='#'>Services</a>
+          <a href='#'>contact</a>
+          <select name="" id="lang-select" value='' onChange="window.location.href=this.value"> 
+              <option value="index.html" id='arb'>ARABIC</option>
+              <span>ENGLISH</span><option value="client-landing-eng-page.html" id='eng'>ENG</option>
+          </select>
+      </div>
+    </nav>
+     
+    <div class="slide slide-container">
+      <div id="mybgs">
+      
+        <div class="mySlide mySlides">   <img src="../images/spa-bg2.jpg" alt="" srcset=""  >
+        </div>
+        <div class="mySlide mySlides">   <img src="../images/spa-wall.jpg" alt="" srcset="" >
+        </div>
+        <div class="mySlide mySlides">   <img src="../images/spa-room.jpg" alt="" srcset="" >
+        </div>
+        <div class="mySlide mySlides">   <img src="../images/spa-wall.jpg" alt="" srcset="" >
+        </div>
+      </div>
+       
+    <!-- Slideshow container -->
+    <div class="slideshow-container" id="mytext">
+
+      <!-- Full-width slides/quotes -->
+
+      <div class="mySlides center " id="slide"   >
+        <img src="../images/service-logo_50.png" height="150px" width="150px"/>
+         <h3>botchi business</h3> 
+        <h1>
+          Welcome to botchi business
+        </h1>
+        <p> We offer a variety of services</p>
+        <a href="#" >Get Started</a>
+      </div>
+
+      <div class="mySlides center " id="slide"   >
+        <img src="../images/service-logo_50.png" height="150px" width="150px"/>
+        <h3>botchi business</h3> 
+        
+        <h1>
+         For service providers clients
+        </h1>
+        <p> We offer a variety of services</p>
+        <a href="#" >Get Started</a>
+      </div>
+
+      <div class="mySlides center " id="slide"   >
+        <img src="../images/service-logo_50.png" height="150px" width="150px"/>
+          
+        <h1>
+          Botchi is here to serve you for at your convenience
+        </h1>
+        <p> We offer a variety of services</p>
+        <a href="#" >Get Started</a>
+      </div>
+
+      <div class="mySlides center " id="slide"   >
+        <img src="../images/service-logo_50.png" height="150px" width="150px"/>
+          
+        <h1>
+          Welcome to botchi business
+        </h1>
+        <p> We offer a variety of services</p>
+        <a href="#" >Get Started</a>
+      </div>
+
+    <!-- Next/prev buttons -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+
+    <!-- Dots/bullets/indicators -->
+    <div class="dot-container">
+      <span class="dot" onclick="currentSlide(1)"></span>
+      <span class="dot" onclick="currentSlide(2)"></span>
+      <span class="dot" onclick="currentSlide(3)"></span>
+      <span class="dot" onclick="currentSlide(4)"></span>
+    </div>
+  </div>
+
+
+    </div>
+    <div class="about">
+      <div class="about-content">
+          <p id="about">About us</p>
+          <h1>SERVICES WE OFFER</h1>
+          <p class="seperator-line"></p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro maxime necessitatibus non ex quae consequatur sit ad. </p>
+      </div>
+    </div>
+    <section class="services-session">
+      <div class="services-container">
+        <div class="services-card">
+          <div class="card-1 first-image" >
+            <!-- <img src="../images/hair-wash.jpg" height="100" width="100"/> -->
+            <div class="card-2 first-text">
+              <p class="text-title">Hair Treatment</p>
+              <p class="text-desc">GET YOUR HAIR GROWTH BACK ON</p>
+              <a href="#">LEARN MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="services-card">
+          <div class="card-1 second-image">
+            <div class="card-2 first-text">
+              <p class="text-title">Hair Treatment</p>
+              <p class="text-desc">GET YOUR HAIR GROWTH BACK ON</p>
+              <a href="#" class="middle-link">LEARN MORE</a>
+            </div>
+          </div>
+        </div>
+        <div class="services-card">
+          <div class="card-1 third-image">
+            <div class="card-2 first-text">
+              <p class="text-title">Hair Treatment</p>
+              <p class="text-desc">GET YOUR HAIR GROWTH BACK ON</p>
+              <a href="#">LEARN MORE</a>
+            </div>
+          </div>
+        </div>
+      
+      </div>
+    </section>
+    <section class="services-type">
+        <div class="services-type-container">
+            <div class="services-image">
+
+            </div>
+            <div class="services-details services-details-1">
+                <div class="services-type-card">
+                  <img src="../images/makeup.jpg" /> 
+                  <h1>MAKE UP</h1>
+                  <p class="seperator-line services-line"></p>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dicta?</p>
+                </div>
+                <div class="services-type-card">
+                  <img src="../images/skin.jpeg" /> 
+                  <h1>MAKE UP</h1>
+                  <p class="seperator-line services-line"></p>
+                  <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dicta?</p>
+                </div>
+            </div>
+            <div class="services-details services-details-2">
+              <div class="services-type-card">
+                <img src="../images/makeup.jpg" /> 
+                <h1>MAKE UP</h1>
+                <p class="seperator-line services-line"></p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dicta?</p>
+              </div>
+              <div class="services-type-card">
+                <img src="../images/skin.jpeg" /> 
+                <h1>MAKE UP</h1>
+                <p class="seperator-line services-line"></p>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, dicta?</p>
+              </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- contzct setion -->
+    <div class="contact-setion">
+      <div class="contact-container">
+        <h2>
+          Contact Us
+        </h2>
+        <p>Need our services or make enquiries ? </p>
+        <div class="contact-link">
+          <a href="#" >Phone Call</a>
+        <a href="#" >Email</a>
+        <a href="#" >WhatsApp</a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+
+
+       
+          
+<script async src="../js/test.js"></script>
+<script async src="../js/navbar.js"></script>
+</bdy>
+</html>
+
+  
+  

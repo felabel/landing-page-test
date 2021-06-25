@@ -1,0 +1,270 @@
+.services-type{
+    width: 100%;
+    margin: 60px 0;
+}
+.services-type-container{
+    width: 100%;
+    /* height: 100vh; */
+    display: flex;
+    flex-wrap: wrap;
+
+}
+/* @media screen and (max-width:950px) {
+    .services-image{
+        width: 100%!important;
+    }
+    .services-details{
+        width: 50%!important;
+    }
+   
+
+}
+@media screen and (max-width:767px){
+    .services-details{
+        width: 100%!important;
+    }
+    .services-image{
+        width: 100%!important;
+        height: 50%!important;
+    }
+    .services-type-container{
+        
+    
+    }
+   
+} */
+
+.services-image{
+    width: 50%;
+    height: 100vh;
+    background-color: blueviolet;
+    background: url(../images/barber-shop2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.services-details-1{
+    width: 25%;
+    height: 100%;
+    background-color: blue;
+
+}
+.services-details-2{
+    width: 25%;
+    height: 100%;
+    background-color: red;
+
+}
+
+.services-type-card{
+    width: 100%;
+    height: 50%;
+    border: 0.5px solid rgb(240, 238, 238);
+    background-color: white;
+    
+    padding: 40px;
+    text-align: center;
+
+}
+.services-type-card img{
+    height: 80px;
+    width: 70px;
+    margin: auto;
+}
+.services-line{
+    width: 80px!important;
+    border-bottom:1.5px solid grey!important;
+
+}
+.services-type-card h1{
+    font-weight: lighter;
+    color: rgb(65, 64, 64);
+}
+.services-type-card p{
+    color: grey;
+    font-size: 15px;
+    font-family: sans-serif;
+}
+.services-type-card:hover {
+    background-color: orange;
+    
+}
+.services-type-card:hover p{
+    color: white;
+}
+.services-type-card:hover .services-line{
+    border-bottom-color: white!important;
+}
+.services-type-card:hover h1{
+    color: white;
+}
+/* @media screen and (max-width:999px) and (min-width:769px){
+    .services-type{
+        margin-top: 540px ;
+    }
+}
+@media screen and (max-width:699px){
+    .services-type{
+        margin-top: 910px ;
+
+    } 
+}
+@media screen and (width:768px){
+    .services-type{
+        margin-top: 2010px ;
+
+    } 
+}
+@media screen and (max-width:768px) and (min-width:330px){
+    .services-type{
+        margin-top: 1180px ;
+
+    } 
+}
+@media screen and (max-width:695px) and (min-width:330px){
+    .services-type{
+        margin-top: 1030px ;
+
+    } 
+}
+@media screen and (max-width:768px) and (min-width:700px){
+    .services-type{
+        margin-top: 620px ;
+
+    } 
+}
+@media screen and (max-width:329px) and (min-width:250px){
+    .services-type{
+        margin-top: 920px ;
+
+    } 
+} */
+.contact-section{
+    width: 100%;
+}
+.contact-container{
+    width: 80%;
+    margin: auto;
+    height: 60vh;
+    background-color: orange;
+    text-align: center;
+    padding: 80px 50px;
+    margin-bottom: 30px;
+
+    /* display: flex; */
+}
+
+
+.contact-container p{
+    padding-bottom: 40px;
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+    
+}
+.contact-container h2{
+    color: white;
+    padding: 0px;
+    margin-top: -10px;
+    font-size: 40px;
+    font-family: 'tangerine' sans-serif;
+}
+
+.contact-container a{
+  padding: 15px 50px;
+  text-decoration: none;
+  font-family: 'roboto', sans-serif;
+  font-size: 1.0em;
+  color: white;
+  border: 2px solid #fff;
+  /* margin: 0 10px; */
+  width: 30%;
+  text-transform: uppercase;
+}
+.contact-container a:hover{
+    background-color: white;
+    color: orange;
+    border: 2px solid white;
+}
+.contact-link{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+@media screen and (max-width: 950px) and (min-width:768px){
+    .contact-container{
+        margin-top: 1000px!important ;
+    }
+    .contact-container a{
+        padding: 15px 20px!important;
+    }
+
+}
+@media screen and (max-width: 767px) and (min-width:702px){
+    .contact-container{
+        margin-top: 850px!important ;
+    }
+    .contact-container a{
+        width: 70%;
+        margin-bottom: 10px;
+        padding: 10px 20px!important;
+
+    }
+    
+    .contact-container p{
+        padding-bottom: 0px!important;
+        font-size: 1.2em;
+        
+    }
+    .contact-container h2{
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 703px) and (min-width:500px){
+    .contact-container{
+        margin-top: 1050px!important ;
+    }
+    .contact-container h2{
+        font-size: 20px;
+    }
+    .contact-container p{
+        color: white;
+        font-size: 1em!important;
+        text-transform: uppercase;
+        
+    }
+    .contact-container a{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px 40px!important;
+
+    }
+
+}
+/* @media screen and (max-width: 420px) and (min-width:350){
+    .contact-container{
+        margin-top: 1200px ;
+        padding: 65px 40px!important;
+    } */
+@media screen and (max-width: 499px) and (min-width:200px){
+    .contact-container{
+        margin-top: 1000px ;
+        padding: 65px 40px!important;
+    }
+    .contact-container h2{
+        font-size: 1.2em!important;
+    }
+    .contact-container p{
+        padding-bottom: 5px!important;
+        color: white;
+        font-size: 1em!important;
+        
+    }
+    .contact-container a{
+        width: 100%;
+        margin-bottom: 10px;
+        padding: 10px 30px!important;
+    }
+}
+
+  
+    
