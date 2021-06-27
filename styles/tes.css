@@ -1,35 +1,55 @@
-body, html{
-    font-family: sans-serif;
-    border: 0;
-    padding: 0;
-    margin: 0;
-    /* line-height: 20px; */
-    /* box-sizing: border-box; */
+@import url('https://fonts.googleapis.com/css?family=Great+Vibes|roboto&display=swap');
+body, html {border: 0;
+padding: 0;
+margin: 0;
 }
-*{
-    box-sizing: border-box;
+/* p, h1, h2, a {
+font-family: 'roboto' sans-serif;
+} */
+*{box-sizing: border-box;}
+body{position: relative;}
+:root{
+--buttonColor: #ffa500;
+--textColor: #808080;
+--textColorPurple: #d705eb; 
 }
-body{
-    position: relative;
+i{
+    font-size: 50px;
+    color: #06c406;
 }
-
-nav{
-    padding:5px 50px;
-    transition: 0.6s;
-    /* width: 50%; */
-    justify-self: center;
-    background-color: white;
-    /* background-color: rgba(77, 74, 74, 0.3); */
-    color: rgb(233, 125, 24);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
+/* .google-map{
+    width: 80%;
+    margin: auto;
+} */
+.map-responsive{
+    display: none;
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+}
+.map-responsive iframe{
+    left:0;
     top:0;
-    left: 0;
+    height:100%;
     width:100%;
-    box-shadow: 14px 11px 15px rgba(0,0,0,0.07);
-    z-index: 10;
+    position:absolute;
+}
+nav{
+padding:5px 50px;
+transition: all 0.6s ease-in;
+justify-self: center;
+background-color: white;
+display: flex;
+align-items: center;
+justify-content: space-between;
+position: fixed;
+top:0;
+left: 0;
+/* height: 70px; */
+width:100%;
+box-shadow: 14px 11px 15px rgba(0,0,0,0.07);
+z-index: 10;
 }
 .navbar-container{
     width: 100%;
@@ -38,9 +58,7 @@ nav{
     background-color: red;
     display: block;
 }
-.botchi{
-    font-size: large;
-}
+
 
 
 .nav-links{
@@ -111,10 +129,11 @@ select option{
     color: black;
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 700px){
     nav{
         width: 100%;
         display: flex;
+        /* height: 100px; */
         /* background-color: goldenrod; */
         /* padding:30px 70px; */
         
@@ -131,14 +150,14 @@ select option{
     } */
     .hamburger{
         position: absolute;
-        left: 85%;
+        left: 80%;
         display: block;
         cursor: pointer;
     }
     .cancel{
         position: absolute;
         top: 10px;
-        left: 90%;
+        left: 85%;
         display: none;
         cursor: pointer;
     }
@@ -152,6 +171,47 @@ select option{
     transition: all 0.5s;
     
 }
+.p-top{
+    font-family: 'Great Vibes' ; 
+    color: white!important; 
+    font-size: 3.75em!important; 
+    margin-top: -20px!important;
+    padding-bottom: 0px!important;
+    animation-name: p-top;
+    transition: 0.8s;
+}
+.detail-caps{
+    margin-top: -60px;
+    font-family: 'roboto';
+    color: #fff;
+    font-size: 50px;
+    font-kerning: 2px;
+    text-transform: uppercase;
+    animation-name: detail-caps;
+}
+.p-down{
+    font-size: 1.3em;
+    color: #fff;
+    font-family: 'roboto';
+    margin-top: -30px;
+    margin-bottom: 60px;
+    animation-name: p-down;
+
+}
+@keyframes p-top{
+    0% {
+        margin-top: 0;
+        opacity: 0;
+    }
+    50% {
+        margin-top: -5px;
+        opacity: 1; 
+    }
+    100% {
+        margin-top: -20px;
+        opacity: 1; 
+    }
+}
 .slide-container{
     width: 100%;
     height: 100vh;
@@ -159,80 +219,193 @@ select option{
 #mybgs{
     height: 100%;
 }
-
 #mybgs img{
     width: 100%;
     height: 100%;
-}
-
-.text{
-    text-align: center;
 }
 .center{
     text-align: center;
 }
 .slideshow-container {
     position: absolute;
-    width: 70%;
-    height: 35%;
-    /* background-color: rgba(0, 0, 0, 0.5); */
+    width: 80%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
     top: 3.5%;
-    left: 15%;
+    left: 10%;
   }
   
-  .mySlides{
-    width: 100%!important; 
-    height: 100%!important; 
-    padding: 0px!important;
-  }
-  #slide{
-      padding: 30px;
-  }
-  #slide p{
-      padding-bottom: 20px;
-      color: white;
-      font-size: 20px;
-  }
-  #slide h1{
-      color: white;
-      padding: 0px;
-      margin-top: -15px;
-      font-size: 50px;
-      font-family: 'tangerine' sans-serif;
-  }
-  #slide img{
-      padding: 0;
-      margin: 0;
-      
-  }
+
   #slide a{
-    background: linear-gradient(90deg, rgb(238, 236, 119) 0%, hsl(51, 94%, 42%) 35%, #f0bf1c 100%);
-    padding: 15px 50px;
-    margin-top: 50px;
+    background-color: var(--buttonColor);
+    /* background: linear-gradient(90deg, rgb(238, 236, 119) 0%, hsl(51, 94%, 42%) 35%, #f0bf1c 100%); */
+    padding: 20px 80px;
     text-decoration: none;
     font-family: 'roboto', sans-serif;
-    font-size: 1.4em;
+    font-size: 0.8em;
     color: white;
+    text-transform: uppercase;
+    font-weight: bold;
   }
  
-  .text{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 50px; color: white;
-    position: absolute;
-    top: 40px; left: 40px;
-    font-weight: bolder;
-  }
-  
-  
+
   /* Slides */
   .mySlides {
     display: none;
-    padding: 80px;
+ 
   }
   .mySlide{
       width: 100%;
       height: 100%;
   }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid{
+    /* display: none; */
+    max-width: 1000px;
+    margin: auto;
+    padding: 20px 15px;
+}
+
+/* Row */
+.row{
+    display: flex;
+    width: 100%;
+}
+.col{
+    padding: 5px 10px;
+    margin: 5px 10px;
+}
+
+.col.l-4{
+    width: 33.33%;
+}
+.contact-fluid{
+    text-align: center;
+    
+}
+.contact-card{
+    width: 20%!important;
+    border: 1px solid grey;
+    text-align: center;
+}
+.contact-card a{
+    text-decoration: none;
+    color: var(--textColor);
+}
+.contact-card p{
+    color: var(--textColor);  
+}
+.contact-fluid{
+    max-width: 100%!important;
+}
+.contact-row{
+    justify-content: space-evenly;
+}
+
+
+
+/* card */
+.card{
+    position: relative;
+    min-height: 400px;
+    max-height: 400px;
+    padding-bottom: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    min-width: 260px;
+}
+.card:hover{
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.103);
+    transition: 0.3s;
+}
+.card,.card .card-img>img{
+    width: 100%;
+}
+.card, .card>.card-content{background: #fff;}
+.card .card-content{
+    text-align: center;
+    padding: 35px 15px;
+    max-width: 80%;
+    margin: auto;
+    position: absolute;
+    bottom: 10px;
+    left: 10%;
+    right: 10%;
+    z-index: 2;
+}
+.card .card-content h4{
+    font-size: 22px!important;
+    font-weight: bold;
+    margin: 5px;
+    line-height: 2;
+
+}
+.card .card-content p{
+    font-size: 14px;
+    line-height: 1.5;
+    margin: 10px 15px 20px 15px;
+}
+
+.card .card-content a.button{
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 10px 30px;
+    background-color: rgb(145, 7, 145);
+    color: #fff;
+    transition: 0.3s background-color;
+}
+.card .card-content a.button:hover{
+    background-color: rgb(206, 176, 4);
+    transition: 0.3s background-color;
+}
+.contact-title{
+    color: black!important;
+}
+
+/* Large Screens */
+@media screen and (max-width:1024px) {
+    .row{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .col.m-6{
+        width: 33.33%!important;
+    }
+}
+/* Medium Screens - IPad */
+@media screen and (max-width:768px) {
+    .row{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .col.m-6{
+        width: 50%!important;
+    }
+}
+/* Small Screens-Phone */
+@media screen and (max-width:414px) {
+    .row{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .col.s-12{
+        width: 100%!important;
+        margin: 0px;
+    }
+}
+@media screen and (max-width:768px){
+    .contact-card{
+        margin-bottom: 20px!important;
+    }
+}
   
   /* Next & previous buttons */
   .prev, .next {
@@ -257,7 +430,6 @@ select option{
     border-radius: 3px 0 0 3px;
   }
   
-  /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
     background-color: rgba(0,0,0,0.8);
     color: white;
@@ -291,8 +463,6 @@ select option{
   .active, .dot:hover {
     background-color: #717171;
   }
-  
-  /* Add an italic font style to all quotes */
   q {font-style: italic;}
   
   /* Add a blue color to the author */
@@ -304,6 +474,7 @@ select option{
     position: absolute;
     top: 125px; 
   }
+
   .about{
       width: 100%;
       /* background-color: aqua; */
@@ -343,39 +514,70 @@ select option{
 
 }
 /* ipad */
+
+
+@media screen and (max-width:900px) and (min-width: 700px){
+    .slide-container{
+        height: 600px;
+    }
+    .slideshow-container {
+        height: 400px;
+        top: 3.5%;
+        left: 10%;
+      }
+    .detail-caps{
+        font-size: 30px!important;  
+        margin-top: -45px;  
+    }
+    .p-top{
+        font-size: 2.5em!important; 
+    }
+    .p-down{
+        font-size: 1.1em!important;
+        margin-top: -20px;
+    }
+    .about-content{
+        width: 70%!important;
+        
+    }
+    .about-content #about{
+        font-size: 2em;
+    }
+    .about-content p{
+       font-size: 1.5em; 
+    }
+   
+   
+}
 @media screen and (max-width:699px) and (min-width: 200px) {
     .slide-container{
         height: 450px!important;
     }
-    #mybgs{
-        height: 100%!important;
-    }
-    .mySlide{
-        height: 100%;
-    }
-    #slide h1{
-        color: white;
-        font-size: 20px!important;
-        font-family: 'tangerine' sans-serif;
-    } 
     .slideshow-container{
         width: 80%!important;
-        height: 200px!important;
-        top: 3%!important;
-        left: 10%!important;
+        height: 300px!important;
+        top: 2%;
     } 
-    #slide p{
-        color: white;
-        font-size: 16px!important;
+    .detail-caps{
+        font-size: 1.2em!important;  
+        margin-top: -30px;  
+        margin-bottom: 40px;  
+    }
+    .p-top{
+        font-size: 1.8em!important; 
+    }
+    .p-down{
+        display: none;
+        font-size: 1.0em!important;
+        margin-top: -18px;
+        margin-bottom: 40px;
     }
     #slide a{
-        padding: 10px 30px!important;
-        font-size: 1em!important;
+        padding: 15px 50px;
     }
-    #slide img{
-        width: 100px;
-      height: 100px;
-    }
+  
+    
+   
     .about{
       
         margin: 0px!important;
@@ -398,29 +600,4 @@ select option{
         width: 100px!important;
     }
     
-}
-
-@media screen and (max-width:900px) and (min-width: 700px){
-    .slide-container{
-        height: 600px;
-    }
-    .about-content{
-        width: 70%!important;
-        
-    }
-    .about-content #about{
-        font-size: 2em;
-    }
-    .about-content p{
-       font-size: 1.5em; 
-    }
-    #slide h1{
-        font-size: 1.8rem;
-    }
-    #slide p{
-       font-size: 1.5em; 
-    }
-    .slideshow-container{
-        /* width: 80%!important; */
-    }
 }
