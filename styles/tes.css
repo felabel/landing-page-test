@@ -15,7 +15,7 @@ body{position: relative;}
 }
 i{
     font-size: 50px;
-    color: #06c406;
+    color: var(--buttonColor);
 }
 /* .google-map{
     width: 80%;
