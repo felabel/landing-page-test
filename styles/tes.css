@@ -22,7 +22,7 @@ i{
     margin: auto;
 } */
 .map-responsive{
-    display: none;
+    /* display: none; */
     overflow:hidden;
     padding-bottom:56.25%;
     position:relative;
