@@ -173,6 +173,7 @@ nav.sticky{
     }
     .dropdown{
         display: inline-block!important;
+        margin-top: 0;
     }
     
     .hamburger{
@@ -324,7 +325,7 @@ nav.sticky{
     background: linear-gradient(to right, var(--buttonColor) 50%,  var(--textColorPurple) 50%);
     background-size: 200%;
     background-position: left;
-    padding: 20px 60px;
+    padding: 10px 20px;
     text-decoration: none;
     font-family: 'roboto', sans-serif;
     font-size: 1em;
