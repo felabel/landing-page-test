@@ -21,35 +21,36 @@
       
       <div class='hamburger' >
           
-          <span class='harmburger-menu'onclick='showMenu()'>Menu</span>
+          <span class='harmburger-menu'onclick='showMenu()'><i class="fas fa-bars"></i></span>
       </div>
         
-      <!-- <div class='cancel'>
-          <span class='m' onClick={this.hideMenu}>cancel</span>
-        
-      </div> -->
+
       <div class="nav-links">
-          <span class='cancel' style="font-size: large;" onclick='hideMenu()'>X</span>
+          <span class='cancel' style="font-size: large;" onclick='hideMenu()'><i class="far fa-window-close"></i></span>
           <a href='#' id="about">About</a>
           <a href='#'>Services</a>
           <a href='#'>contact</a>
-          <select name="" id="lang-select" value='' onChange="window.location.href=this.value"> 
-              <option value="index.html" id='arb'>ARABIC</option>
-              <span>ENGLISH</span><option value="client-landing-eng-page.html" id='eng'>ENG</option>
-          </select>
+          <div class="dropdown">
+            <span class="dropbtn">English <span><i class="fa fa-caret-down"></i></span>
+            </span>
+            
+            <div class="dropdown-content">
+              <a href="#">ARB</a>
+            </div>
+          </div> 
       </div>
     </nav>
      
     <div class="slide slide-container">
       <div id="mybgs">
       
-        <div class="mySlide mySlides">   <img src="../images/spa-bg2.jpg" alt="" srcset=""  >
+        <div class="mySlide mySlides fade">   <img src="../images/massage.jpg" alt="" srcset=""  >
         </div>
-        <div class="mySlide mySlides">   <img src="../images/spa-wall.jpg" alt="" srcset="" >
+        <div class="mySlide mySlides fade">   <img src="../images/spa-bg2.jpg" alt="" srcset="" >
         </div>
-        <div class="mySlide mySlides">   <img src="../images/spa-room.jpg" alt="" srcset="" >
+        <div class="mySlide mySlides fade">   <img src="../images/female-salon.jpg" alt="" srcset="" >
         </div>
-        <div class="mySlide mySlides">   <img src="../images/spa-wall.jpg" alt="" srcset="" >
+        <div class="mySlide mySlides fade">   <img src="../images/makeup.jpg" alt="" srcset="" >
         </div>
       </div>
        
@@ -58,9 +59,9 @@
 
       <!-- Full-width slides/quotes -->
 
-      <div class="mySlides center " id="slide"   >
+      <div class="mySlides center fade " id="slide"   >
         <img src="../images/service-logo_50.png" height="150px" width="150px"/>
-         <p class="p-top">Welcome to botchi business</p> 
+         <p class="p-top">Welcome to <span class="botchi-purple">botchi </span>business</p> 
         <p class = 'detail-caps'>
           Welcome to botchi business
         </p class = 'detail-caps'>
@@ -68,9 +69,9 @@
         <a href="#" >Get Started</a>
       </div>
 
-      <div class="mySlides center " id="slide"   >
+      <div class="mySlides center fade " id="slide"   >
         <img src="../images/service-logo_50.png" height="150px" width="150px"/>
-        <p class="p-top">botchi business</p> 
+        <p class="p-top"><span class="botchi-orange">botchi</span> business</p> 
         <p class="detail-caps">
          For service providers and clients
         </p>
@@ -78,9 +79,9 @@
         <a href="#" >Get Started</a>
       </div>
 
-      <div class="mySlides center " id="slide"   >
+      <div class="mySlides center fade " id="slide"   >
         <img src="../images/service-logo_50.png" height="150px" width="150px"/>
-        <p class="p-top">botchi business</p> 
+        <p class="p-top"><span class="botchi-purple">botchi</span> business</p> 
 
           
         <p class="detail-caps">
@@ -90,9 +91,9 @@
         <a href="#" >Get Started</a>
       </div>
 
-      <div class="mySlides center " id="slide"   >
+      <div class="mySlides center  fade" id="slide"   >
         <img src="../images/service-logo_50.png" height="150px" width="150px"/>
-        <p class="p-top">botchi business</p> 
+        <p class="p-top"><span class="botchi-orange">botchi</span> business</p> 
           
         <p class="detail-caps">
           Welcome to botchi business
@@ -122,7 +123,25 @@
           <p id="about">About us</p>
           <h1>SERVICES WE OFFER</h1>
           <p class="seperator-line"></p>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro maxime necessitatibus non ex quae consequatur sit ad. </p>
+          <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro maxime necessitatibus non ex quae consequatur sit ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad nostrum ipsam sit aut hic. Excepturi at cupiditate voluptates corporis provident.</p>
+        <div class="about-botchi purple">
+          <h1>Botchi-business</h1>
+          <p class="seperator-line"></p>
+
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur cumque aut eveniet quam illum. Ut, maxime? Quas earum obcaecati non iusto tenetur omnis. Repellendus recusandae soluta architecto suscipit ipsam dignissimos quia dicta, magnam, doloremque assumenda vitae dolorem. Architecto, a maiores!</p> <br>
+          <a href="#" class="get-app">Get the App</a>
+        </div>
+        <div class='about-botchi orange' >
+          <h1>Botchi-client</h1>
+          <p class="seperator-line"></p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus sequi accusamus incidunt modi iusto cum dolore odit. Magni aliquam, mollitia culpa labore autem vel inventore eveniet ipsa in odit necessitatibus placeat maiores consequuntur nihil ab eum voluptatum, modi voluptas asperiores.
+
+          </p><br>
+          <a href="#" class="get-app">Get the App</a>
+
+        </div>
+          
       </div>
     </div>
     <!-- services card -->
@@ -136,10 +155,11 @@
                   <div class="card-content">
                       <h4>Hair Treatment</h4>
                       <p>GET YOUR HAIR GROWTH BACK ON</p>
-                      <a href="#" class="button">LEARN MORE</a>
+                      <a href="#" class="button">GET YOURS</a>
                   </div>
               </div>
           </div>
+          
           <div class="col s-12 m-6 l-4">
               <div class="card">
                   <div class="card-img">
@@ -148,7 +168,7 @@
                   <div class="card-content">
                       <h4>Hair Treatment</h4>
                       <p>GET YOUR HAIR GROWTH BACK ON</p>
-                      <a href="#" class="button">LEARN MORE</a>
+                      <a href="#" class="button">GET YOURS</a>
                   </div>
               </div>
           </div>
@@ -160,7 +180,7 @@
                   <div class="card-content">
                       <h4>Hair Treatment</h4>
                       <p>GET YOUR HAIR GROWTH BACK ON</p>
-                      <a href="#" class="button">LEARN MORE</a>
+                      <a href="#" class="button">GET YOURS</a>
                   </div>
               </div>
           </div>
@@ -203,9 +223,53 @@
         </div>
 
     </section>
+    <!-- services card -->
+    <div class="container-fluid">
+      <div class="row">
+          <div class="col s-12 m-6 l-4">
+              <div class="card">
+                  <div class="card-img">
+                      <img src="../images/face-beauty.jpg" alt="">
+                  </div>
+                  <div class="card-content">
+                      <h4>Hair Treatment</h4>
+                      <p>GET YOUR HAIR GROWTH BACK ON</p>
+                      <a href="#" class="button">GET YOURS</a>
+                  </div>
+              </div>
+          </div>
+          
+          <div class="col s-12 m-6 l-4">
+              <div class="card">
+                  <div class="card-img">
+                      <img src="../images/makeup-1.jpg" alt="">
+                  </div>
+                  <div class="card-content">
+                      <h4>Hair Treatment</h4>
+                      <p>GET YOUR HAIR GROWTH BACK ON</p>
+                      <a href="#" class="button">GET YOURS</a>
+                  </div>
+              </div>
+          </div>
+          <div class="col s-12 m-6 l-4">
+              <div class="card">
+                  <div class="card-img">
+                      <img src="../images/massage.jpg" alt="">
+                  </div>
+                  <div class="card-content">
+                      <h4>Hair Treatment</h4>
+                      <p>GET YOUR HAIR GROWTH BACK ON</p>
+                      <a href="#" class="button">GET YOURS</a>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+    <!-- end of services card -->
     <!-- contzct setion -->
     <div class="container-fluid contact-fluid">
       <h3 class="p-top contact-title">contact us</h3>
+      <p>Have any enquiries or want to get started? Then contact us</p>
       <div class="row contact-row">
           <div class="col s-12 m-6 l-4 contact-card">
             <span><i class="fas fa-map-marker-alt"></i></span>
@@ -250,11 +314,28 @@
             </p>
           </div>
         </div>
+        <br> <br>
         <div class="google-map map-responsive">
           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d927755.0519899436!2d46.262027123739045!3d24.72539808840737!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2f03890d489399%3A0xba974d1c98e79fd5!2sRiyadh%20Saudi%20Arabia!5e0!3m2!1sen!2sng!4v1624836246425!5m2!1sen!2sng" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
       </div>
+      <section class="footer-container">
+        <div class="footer">
+          <div class="footer-content">
+            <p>QUICK LINKS</p>
+              <a>About Us</a>
+              <a>Contact Us</a>
+              <a>Services we offer</a>
+          </div>
+          <div class="footer-2">
+            <p>l</p>
+          </div>
+        </div>
+    
+      </section>
   </div>
+  <!-- footer -->
+  
   </div>
 
 

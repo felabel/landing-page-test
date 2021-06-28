@@ -2,6 +2,7 @@
 body, html {border: 0;
 padding: 0;
 margin: 0;
+font-family: 'roboto';
 }
 /* p, h1, h2, a {
 font-family: 'roboto' sans-serif;
@@ -17,10 +18,9 @@ i{
     font-size: 50px;
     color: var(--buttonColor);
 }
-/* .google-map{
-    width: 80%;
-    margin: auto;
-} */
+.fa-window-close, .fa-bars{
+    font-size: 30px; 
+}
 .map-responsive{
     /* display: none; */
     overflow:hidden;
@@ -58,9 +58,6 @@ z-index: 10;
     background-color: red;
     display: block;
 }
-
-
-
 .nav-links{
     /* background-color: aqua; */
     font-size: 2em;
@@ -74,6 +71,53 @@ z-index: 10;
     padding-left: 20px;
     padding-right: 20px;
 }
+/* dropdown */
+.dropdown{
+    height: 10px;
+    font-size: 16px;  
+    outline: none;
+    color: var(--textColor);
+    /* padding: 14px 16px; */
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    margin-top: -24px;
+    /* background-color: red; */
+    height: 0;
+    cursor: pointer;
+}
+.dropbtn{
+    height: auto;
+    border-bottom: 2px solid rgb(226, 224, 224);
+    padding: 7px 12px;
+    color: var(--textColor);
+}
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 70px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  .dropdown-content a {
+    width: 70px;
+    float: none;
+    color: black;
+    padding: 12px 20px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  .dropdown-content a:hover {
+    background-color: #ddd;
+  }
+  .fa-caret-down{
+      visibility: hidden;
+  }
+  .dropdown:hover .dropdown-content {
+    display: block;
+  } 
 .nav-links a{
     
     /* border-radius: 7px; */
@@ -84,16 +128,15 @@ z-index: 10;
     text-decoration: none;
     color: grey;
     margin-left: 3px;
-    /* border-bottom-left-radius: 7px;
-    border-top-right-radius: 7px; */
-    border-bottom: 2px solid rgb(226, 224, 224);
-    /* background-color: rgb(233, 125, 24); */
-    /* background: linear-gradient(90deg, rgb(238, 236, 119) 0%, hsl(51, 94%, 42%) 35%, #f0bf1c 100%) */
+    
+    border-bottom: 2px solid #e2e0e0;
+    transition: border-bottom 0.2s;
+    
 
     
 }
 .nav-links a:hover{
-    border-bottom: 2px solid goldenrod;
+    border-bottom: 2px solid var(--buttonColor);
 
 }
 .nav-links a:active{
@@ -114,40 +157,24 @@ nav.sticky{
 .cancel{
     display: none;
 }
-select{
-    border: none;
-    /* border-bottom: 2px solid goldenrod; */
-    
-    background: transparent url('../images/arab.jpeg') no-repeat;
-    color: whitesmoke;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
 
-}
-select option{
-    color: black;
-}
-
-@media screen and (max-width: 700px){
+@media screen and (max-width: 800px){
     nav{
         width: 100%;
         display: flex;
-        /* height: 100px; */
-        /* background-color: goldenrod; */
-        /* padding:30px 70px; */
         
     }
     .nav-links{
+        /* background-color: red; */
         display: none;
-        width: 30%;
+        width: 42%;
         /* width: 30%; */
         /* background-color: gold; */
     }
-    /* h1{
-        left: 25%;
-        position: absolute;
-    } */
+    .dropdown{
+        display: inline-block!important;
+    }
+    
     .hamburger{
         position: absolute;
         left: 80%;
@@ -171,14 +198,38 @@ select option{
     transition: all 0.5s;
     
 }
+.fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 8s;
+    animation-name: fade;
+    animation-duration: 8s;
+  }
+  
+  @-webkit-keyframes fade {
+    0% {opacity: .8}
+    25% {opacity: .9}
+    50% {opacity:  1}
+    75% {opacity:  1}
+    100% {opacity: 1}
+  }
+  
+  @keyframes fade {
+    0% {opacity: .8}
+    25% {opacity: .9}
+    50% {opacity:  1}
+    75% {opacity:  1}
+    100% {opacity: 1}
+  }
 .p-top{
     font-family: 'Great Vibes' ; 
+    /* position: absolute; */
     color: white!important; 
     font-size: 3.75em!important; 
     margin-top: -20px!important;
     padding-bottom: 0px!important;
-    animation-name: p-top;
-    transition: 0.8s;
+    /* animation: p-top 6s linear ; */
+    /* animation-delay: 3s; */
+    /* transition: 0.8s; */
 }
 .detail-caps{
     margin-top: -60px;
@@ -200,11 +251,23 @@ select option{
 }
 @keyframes p-top{
     0% {
-        margin-top: 0;
+        margin-top: -200px;
         opacity: 0;
     }
-    50% {
-        margin-top: -5px;
+    20% {
+        margin-top: -150px;
+        opacity: 0.8; 
+    }
+    40% {
+        margin-top: -100px;
+        opacity: .9; 
+    }
+    60% {
+        margin-top: -50px;
+        opacity: 1; 
+    }
+    80% {
+        margin-top: -35px;
         opacity: 1; 
     }
     100% {
@@ -234,22 +297,48 @@ select option{
     top: 3.5%;
     left: 10%;
   }
-  
-
   #slide a{
-    background-color: var(--buttonColor);
-    /* background: linear-gradient(90deg, rgb(238, 236, 119) 0%, hsl(51, 94%, 42%) 35%, #f0bf1c 100%); */
+    /* background-color: var(--buttonColor); */
+    border: 2px solid #ffc107;
+    background: linear-gradient(to right, var(--buttonColor) 50%,  var(--textColorPurple)  50%);
+    background-size: 200%;
+    background-position: left;
     padding: 20px 80px;
     text-decoration: none;
     font-family: 'roboto', sans-serif;
-    font-size: 0.8em;
+    font-size: 1em;
+    letter-spacing: 2px;
     color: white;
+    cursor: pointer;
     text-transform: uppercase;
     font-weight: bold;
-  }
- 
+    transition: background-position 0.5s;
 
-  /* Slides */
+  }
+  #slide a:hover{
+      background-position: right;
+      color: #000;
+  }
+  .get-app{
+    border: 2px solid #ffc107;
+    background: linear-gradient(to right, var(--buttonColor) 50%,  var(--textColorPurple) 50%);
+    background-size: 200%;
+    background-position: left;
+    padding: 20px 60px;
+    text-decoration: none;
+    font-family: 'roboto', sans-serif;
+    font-size: 1em;
+    letter-spacing: 2px;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-position 0.5s; 
+  }
+  .get-app:hover{
+    background-position: right;
+    color: #000;
+}
   .mySlides {
     display: none;
  
@@ -258,11 +347,13 @@ select option{
       width: 100%;
       height: 100%;
   }
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
-
-body{
-    font-family: 'Poppins', sans-serif;
+  .botchi-purple{
+      color: var(--textColorPurple)
+  }
+  .botchi-orange{
+    color: var(--buttonColor)
 }
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
 .container-fluid{
     /* display: none; */
@@ -270,7 +361,6 @@ body{
     margin: auto;
     padding: 20px 15px;
 }
-
 /* Row */
 .row{
     display: flex;
@@ -285,8 +375,19 @@ body{
     width: 33.33%;
 }
 .contact-fluid{
-    text-align: center;
-    
+    text-align: center;  
+}
+.contact-fluid h3{
+    padding: 0px;
+    margin: 0px;
+}
+.contact-fluid p{
+    color: var(--textColor);
+    font-size: 1em;
+}
+.contact-fluid:hover{
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.103);
+    transition: 0.3s;
 }
 .contact-card{
     width: 20%!important;
@@ -306,8 +407,6 @@ body{
 .contact-row{
     justify-content: space-evenly;
 }
-
-
 
 /* card */
 .card{
@@ -356,12 +455,12 @@ body{
     font-weight: bold;
     text-decoration: none;
     padding: 10px 30px;
-    background-color: rgb(145, 7, 145);
+    background-color:var(--buttonColor);
     color: #fff;
     transition: 0.3s background-color;
 }
 .card .card-content a.button:hover{
-    background-color: rgb(206, 176, 4);
+    background-color: var(--textColorPurple);
     transition: 0.3s background-color;
 }
 .contact-title{
@@ -486,7 +585,7 @@ body{
 
   }
   .about-content{
-      width: 50%;
+      width: 70%;
       /* border: 2px solid red; */
       /* height: 90%; */
       align-self: center;
@@ -494,12 +593,34 @@ body{
       padding: 20px 0px;
       margin: 0;
   }
+  .about-botchi{
+      width: 100%;
+      margin-top: 50px;
+      margin-bottom: 50px;
+      height: auto;
+      padding: 20px;
+  }
+  .about-botchi:hover{
+    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.103);
+    transition: 0.3s;
+}
+  .purple h1{
+      color: var(--textColorPurple);
+      letter-spacing: 1px;
+      font-family: 'poppins';
+  }
+  .orange h1{
+    color: var(--buttonColor);
+    letter-spacing: 1px;
+    font-family: 'poppins';
+}
+
   .about-content p{
     color: rgb(27, 27, 27);
     font-size: 18px;
 }
 .about-content #about{
-    color: hsl(51, 94%, 42%);
+    color: var(--buttonColor);
     font-size: 22px;
     font-family: 'tangerine' sans-serif;
 }
@@ -509,8 +630,9 @@ body{
 }
 .seperator-line{
     width: 150px;
-    border-bottom: 1.5px solid hsl(51, 94%, 42%);
-    margin: auto; 
+    border-bottom: 1.5px solid #ffa500;
+    margin: auto;
+    margin-top: -10px; 
 
 }
 /* ipad */
@@ -600,4 +722,45 @@ body{
         width: 100px!important;
     }
     
+}
+.footer-container{
+    background-color: black;
+    width: 100%;
+}
+.footer{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+align-items: center;
+justify-content: space-evenly;
+}
+.footer-content{
+    color: grey;
+    width: 50%;
+    height: 200px;
+    border: 1px solid grey;
+    text-align: center;
+    /* background-color: red; */
+    justify-content: space-evenly;
+
+
+}
+.footer-2{
+    border: 1px solid grey;
+    text-align: center;
+    /* background-color: red; */
+    justify-content: space-evenly;
+
+    color: grey;
+    width: 50%;
+    height: 200px;
+    width: 50%;
+}
+.footer-content a{
+    display: block;
+    text-decoration: none;
+    padding: 10px 40px;
+    margin: 10px;
 }
