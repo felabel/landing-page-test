@@ -63,14 +63,14 @@ z-index: 10;
     font-size: 2em;
     font-weight: bold;
     /* padding-right: 30px; */
-    width: 35%;
+    /* width: 35%; */
     display: flex;
     justify-content: space-around;
 }
-#about{
+/* #about{
     padding-left: 20px;
     padding-right: 20px;
-}
+} */
 /* dropdown */
 .dropdown{
     display: inline-block;
@@ -82,7 +82,7 @@ z-index: 10;
     background-color: inherit;
     font-family: inherit;
     margin: 0;
-    margin-bottom: 8px;
+    margin-top: 8px!important;
     /* background-color: red; */
     height: 0;
     cursor: pointer;
@@ -140,10 +140,7 @@ z-index: 10;
     border-bottom: 2px solid var(--buttonColor);
 
 }
-.nav-links a:active{
-    border-bottom: 2px solid goldenrod;
 
-}
 nav.sticky{
     /* padding: 5px 70px; */
     background: #fff;
@@ -190,7 +187,7 @@ nav.sticky{
     .cancel{
         position: absolute;
         top: 10px;
-        left: 85%;
+        left: 92%;
         display: none;
         cursor: pointer;
     }
