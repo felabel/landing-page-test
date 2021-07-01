@@ -4,6 +4,9 @@ padding: 0;
 margin: 0;
 font-family: 'roboto';
 }
+a{
+    text-decoration: none;
+}
 /* p, h1, h2, a {
 font-family: 'roboto' sans-serif;
 } */
@@ -17,6 +20,10 @@ body{position: relative;}
 .contact-fluid i{
     font-size: 50px;
     color: var(--buttonColor);
+    margin: 10px;
+}
+a{
+    text-decoration: none!important;
 }
 .fa-window-close, .fa-bars{
     font-size: 30px; 
@@ -67,10 +74,13 @@ z-index: 10;
     display: flex;
     justify-content: space-around;
 }
-/* #about{
-    padding-left: 20px;
-    padding-right: 20px;
-} */
+.botchi{
+    color: var(--buttonColor);
+    font-size: 2em;
+    font-weight: bold;
+    letter-spacing: 2px;
+    font-family: 'roboto' sans-serif;
+}
 /* dropdown */
 .dropdown{
     display: inline-block;
@@ -161,11 +171,17 @@ nav.sticky{
     }
 }
 @media screen and (max-width: 800px){
+    .botchi{
+        left: 30%;
+        position: absolute;
+        font-size: 1.6em;
+    }
     nav{
         width: 100%;
         display: flex;
         
     }
+
     .nav-links{
         /* background-color: red; */
         display: none;
@@ -320,7 +336,7 @@ nav.sticky{
   }
   #slide a:hover{
       background-position: right;
-      color: #000;
+      /* color: rgb(51, 45, 45); */
   }
   .get-app{
     border: 2px solid #ffc107;
@@ -350,12 +366,12 @@ nav.sticky{
       width: 100%;
       height: 100%;
   }
-  .botchi-purple{
+  /* .botchi-purple{
       color: var(--textColorPurple)
   }
   .botchi-orange{
     color: var(--buttonColor)
-}
+} */
   @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap');
 
 .container-fluid{
@@ -577,70 +593,52 @@ nav.sticky{
     top: 125px; 
   }
 
-  .about{
-      width: 100%;
-      /* background-color: aqua; */
-      /* height: 40vh!important; */
-      margin-top: 30px!important;
-      margin-bottom: 30px;
-      display: flex;
-      flex-direction: column;
-
-  }
-  .about-content{
-      width: 70%;
-      /* border: 2px solid red; */
-      /* height: 90%; */
-      align-self: center;
-      text-align: center;
-      padding: 20px 0px;
-      margin: 0;
-  }
-  .about-botchi{
-      width: 100%;
-      margin-top: 50px;
-      margin-bottom: 50px;
-      height: auto;
-      padding: 20px;
-      
-  }
-  .about-botchi:hover{
-    box-shadow: 4px 4px 40px rgba(0, 0, 0, 0.103);
-    transition: 0.3s;
+.about{
+    font-family: 'roboto', sans-serif;
+    letter-spacing: 1px;
+}
+.about-container h3{
+    margin: auto;
+    text-align: center;
+}
+.about-container a{
+    margin: auto;
+    text-align: center;
 }
 .text{
-    text-align: justify;
+    height: 200px;
 }
-  .purple h1{
-      color: var(--textColorPurple);
+  .left h1{
+      color: var(--buttonColor);
       letter-spacing: 1px;
       font-family: 'poppins';
+      align-self: center;
+      text-align: center;
   }
-  .orange h1{
-    color: var(--buttonColor);
+  .left .seperator-line{
+      align-self: center!important;
+      text-align: center!important;
+
+  }
+  .right h1{
+    color: var(--textColorPurple);
     letter-spacing: 1px;
     font-family: 'poppins';
+    align-self: center;
+    text-align: center;
 }
 
-  .about-content p{
-    color: rgb(27, 27, 27);
-    font-size: 18px;
-}
-.about-content #about{
-    color: var(--buttonColor);
-    font-size: 22px;
-    font-family: 'tangerine' sans-serif;
-}
-.about-content h1{
-    font-weight: lighter;
-    font-stretch: wider;
-}
+
+
 .seperator-line{
     width: 150px;
     border-bottom: 1.5px solid #ffa500;
-    margin: auto;
+    margin: auto!important;
     margin-top: -10px; 
 
+}
+@media screen {
+    
 }
 /* ipad */
 
@@ -651,7 +649,7 @@ nav.sticky{
     }
     .slideshow-container {
         height: 400px;
-        top: 3.5%;
+        top: 1.5%;
         left: 10%;
       }
     .detail-caps{
@@ -685,7 +683,7 @@ nav.sticky{
     .slideshow-container{
         width: 80%!important;
         height: 300px!important;
-        top: 2%;
+        top: 1%;
     } 
     .detail-caps{
         font-size: 1.2em!important;  
